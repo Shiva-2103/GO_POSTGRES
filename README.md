@@ -10,7 +10,7 @@ A Go-based REST API application that integrates with PostgreSQL to manage stocks
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Project Structure](#project-structure)
-- [Contributing](#contributing)
+
 
 
 ---
@@ -66,15 +66,17 @@ Run the following SQL script to create the required table:
 2. The server will start at http://localhost:3000.
 
 ## API Endpoints
-```
 Base URL: http://localhost:3000
-Method	Endpoint	Description
-GET	/api/stock	Get all stocks
-GET	/api/stock/{id}	Get stock by ID
-POST	/api/newstock	Add a new stock
-PUT	/api/stock/{id}	Update stock by ID
-DELETE	/api/deletestock/{id}	Delete stock by ID
-```
+
+| Method | Endpoint                 | Description          |
+|--------|------------------------  |----------------------|
+| GET    | `/api/stock`             | Get all stocks       |
+| GET    | `/api/stock/{id}`        | Get stock by ID      |
+| POST   | `/api/newstock`          | Add a new stock      |
+| PUT    | `/api/stock/{id}`        | Update stock by ID   |
+| DELETE | `/api/deletestock/{id}`  | Delete stock by ID   |
+
+
 
 Example Payload for /api/newstock:
 ```
