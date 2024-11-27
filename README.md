@@ -42,18 +42,18 @@ A Go-based REST API application that integrates with PostgreSQL to manage stocks
    cd GO_POSTGRES
 2. Install dependencies:
     ```bash
-    go mod tidy
+   go mod tidy
 3. Set up PostgreSQL:
 
 Create a database named stocksdb.
 Run the following SQL script to create the required table:
-
-    CREATE TABLE stocks (
-    id SERIAL PRIMARY KEY,
-    name TEXT NOT NULL,
-    price INT NOT NULL,
-    company TEXT NOT NULL );
-
+ ```
+  CREATE TABLE stocks (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  price INT NOT NULL,
+  company TEXT NOT NULL );
+```
 4. Configure the database connection in the project:
    Edit the database connection parameters in the middleware/db.go file.
 
@@ -61,11 +61,12 @@ Run the following SQL script to create the required table:
 
 1. Run the application:
       ```bash
-    go run main.go
+   go run main.go
 
 2. The server will start at http://localhost:3000.
 
 ## API Endpoints
+```
 Base URL: http://localhost:3000
 Method	Endpoint	Description
 GET	/api/stock	Get all stocks
@@ -73,6 +74,7 @@ GET	/api/stock/{id}	Get stock by ID
 POST	/api/newstock	Add a new stock
 PUT	/api/stock/{id}	Update stock by ID
 DELETE	/api/deletestock/{id}	Delete stock by ID
+```
 
 Example Payload for /api/newstock:
 ```
@@ -81,6 +83,7 @@ Example Payload for /api/newstock:
     "price": 1000,
     "company": "Tesla"
 }
+
 ```
 
 ## Project Structure
